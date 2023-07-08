@@ -16,5 +16,17 @@
     "amount": 64.44,
     "category": "KFC",
     "date": "08/07/2023"
+  },
+  {
+    "id": "e789c4cf-45de-4df9-ad6d-d93fa68e6b54",
+    "amount": 20.0,
+    "category": "Car",
+    "date": "08/07/2023"
+  },
+  {
+    "id": "1f98e8c5-b3f7-41ea-a8f5-fee90753cb30",
+    "amount": 95.88,
+    "category": "Job",
+    "date": "08/07/2023"
   }
 ]
