@@ -34,6 +34,20 @@ def view_expenses():
         print(f"Amount of expense: £{amount:.2f}\n")
 
 
+def calculate_expenses():
+    '''
+    Function -> Iterates through the expenses amount and adding the total expenses
+    '''
+    all_expenses = load_data()
+    total = 0
+    for expense in all_expenses:
+        total += expense["amount"]
+
+    total = round(total, 2)
+
+    print(f"Total Expenses: £{total:.2f}")
+
+
 def save_data(expenses):
     '''
     Function saves the data and keeps add new expenses to the expenses.json file
@@ -73,9 +87,10 @@ while True:
     print("\n Expense Tracking Application \n")
     print("1. Add Expense")
     print("2. View Expenses")
-    print("3. Load Data")
-    print("4. Save Data")
-    print("5. Quit")
+    print("3. Total Expenses")
+    print("4. Load Data")
+    print("5. Save Data")
+    print("6. Quit")
 
     choice = input("Please enter choice: ")
 
@@ -84,9 +99,11 @@ while True:
     elif (choice == "2"):
         view_expenses()
     elif (choice == "3"):
-        load_data()
+        calculate_expenses()
     elif (choice == "4"):
-        save_data(expenses)
+        load_data()
     elif (choice == "5"):
+        save_data(expenses)
+    elif (choice == "6"):
         print("Program has ended")
         break
