@@ -2,8 +2,6 @@ import uuid
 from datetime import date, time
 import json
 
-# unique_id = uuid.uuid4()
-
 expenses = []
 
 
