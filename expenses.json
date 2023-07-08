@@ -1,0 +1,20 @@
+[
+  {
+    "id": "9f26fcca-21da-4911-ad99-95a5153c61e0",
+    "amount": 56.0,
+    "category": "Car Fiance",
+    "date": "08/07/2023"
+  },
+  {
+    "id": "9f26fcca-21da-4911-ad99-95a5153c90th",
+    "amount": 100.0,
+    "category": "ABC",
+    "date": "08/07/2023"
+  },
+  {
+    "id": "f1515aaa-ed41-49e4-871e-9f13a557e6cb",
+    "amount": 64.44,
+    "category": "KFC",
+    "date": "08/07/2023"
+  }
+]
