@@ -76,8 +76,18 @@ def save_data(expenses):
     # Loads the JSON data
     current_expenses = load_data()
 
+    # Create a set of id's that are already in expense.json
+    existing_ids = set(expense["id"] for expense in current_expenses)
+
+    unique_expenses = []
+
+    for expense in expenses:
+        if expense['id'] not in existing_ids:
+            unique_expenses.append(expense)
+            existing_ids.add(expense["id"])
+
     # Combines the old expense with the new expenses
-    all_expenses = current_expenses + expenses
+    all_expenses = current_expenses + unique_expenses
 
     # Saves all expenses
     with open('expenses.json', 'w') as file:
@@ -104,30 +114,34 @@ def load_data():
         return []
 
 
-while True:
-    print("\n Expense Tracking Application \n")
-    print("1. Add Expense")
-    print("2. View Expenses")
-    print("3. Total Expenses")
-    print("4. Inspect An Expense")
-    print("5. Load Data")
-    print("6. Save Data")
-    print("7. Quit")
+def main_menu():
+    while True:
+        print("\n Expense Tracking Application \n")
+        print("1. Add Expense")
+        print("2. View Expenses")
+        print("3. Total Expenses")
+        print("4. Inspect An Expense")
+        print("5. Quit")
 
-    choice = input("Please enter choice: ")
+        choice = input("Please enter choice: ")
 
-    if (choice == "1"):
-        add_expense()
-    elif (choice == "2"):
-        view_expenses()
-    elif (choice == "3"):
-        calculate_expenses()
-    elif (choice == "4"):
-        inspect_expense()
-    elif (choice == "5"):
-        load_data()
-    elif (choice == "6"):
-        save_data(expenses)
-    elif (choice == "7"):
-        print("Program has ended")
-        break
+        if (choice == "1"):
+            add_expense()
+            save_data(expenses)
+        elif (choice == "2"):
+            view_expenses()
+        elif (choice == "3"):
+            calculate_expenses()
+        elif (choice == "4"):
+            inspect_expense()
+        elif (choice == "5"):
+            print("Program has ended")
+            break
+
+
+def main():
+    # Starts the application
+    main_menu()
+
+
+main()
