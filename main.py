@@ -35,6 +35,8 @@ def view_expenses():
         print(f"Category of expense: {category}")
         print(f"Amount of expense: £{amount:.2f}\n")
 
+    return all_expenses
+
 
 def calculate_expenses():
     '''
@@ -48,6 +50,23 @@ def calculate_expenses():
     total = round(total, 2)
 
     print(f"Total Expenses: £{total:.2f}")
+
+
+def inspect_expense():
+    all_expenses = view_expenses()
+
+    select_index = int(input("Select an Expense To Investigate: \n"))
+    try:
+        amount = all_expenses[select_index-1]["amount"]
+        category = all_expenses[select_index-1]["category"]
+        date = all_expenses[select_index-1]["date"]
+        time = all_expenses[select_index-1]["time"]
+        print(f"Category of expense: {category}")
+        print(f"Amount of expense: £{amount:.2f}")
+        print(f"Date of when expense occurred: {date}")
+        print(f"Time of when expense occurred: {time}")
+    except IndexError:
+        print("Invalid Expense")
 
 
 def save_data(expenses):
@@ -90,9 +109,10 @@ while True:
     print("1. Add Expense")
     print("2. View Expenses")
     print("3. Total Expenses")
-    print("4. Load Data")
-    print("5. Save Data")
-    print("6. Quit")
+    print("4. Inspect An Expense")
+    print("5. Load Data")
+    print("6. Save Data")
+    print("7. Quit")
 
     choice = input("Please enter choice: ")
 
@@ -103,9 +123,11 @@ while True:
     elif (choice == "3"):
         calculate_expenses()
     elif (choice == "4"):
-        load_data()
+        inspect_expense()
     elif (choice == "5"):
-        save_data(expenses)
+        load_data()
     elif (choice == "6"):
+        save_data(expenses)
+    elif (choice == "7"):
         print("Program has ended")
         break
