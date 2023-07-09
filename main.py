@@ -1,5 +1,5 @@
 import uuid
-from datetime import date, time
+from datetime import datetime
 import json
 
 expenses = []
@@ -11,13 +11,15 @@ def add_expense():
     '''
     amount = float(input("Please enter the amount of the expense: \n"))
     category = input("Enter the category of the expense: \n")
-    current_date = date.today().strftime("%d/%m/%Y")
+    current_date = datetime.today().strftime("%d/%m/%Y")
+    current_time = datetime.now().strftime("%H:%M:%S")
 
     expense = {
         "id": str(uuid.uuid4()),
         "amount": amount,
         "category": category,
-        "date": current_date
+        "date": current_date,
+        "time": current_time
     }
     expenses.append(expense)
     print("Expense Added!")

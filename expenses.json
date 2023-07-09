@@ -1,44 +1,9 @@
 [
   {
-    "id": "9f26fcca-21da-4911-ad99-95a5153c61e0",
-    "amount": 56.0,
-    "category": "Car Fiance",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "e789c4cf-45de-4df9-ad6d-d93fa68e6b54",
-    "amount": 20.0,
+    "id": "611a1005-a0ea-4fa7-9489-5498ebe24cd7",
+    "amount": 100.99,
     "category": "Car",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "1f98e8c5-b3f7-41ea-a8f5-fee90753cb30",
-    "amount": 95.88,
-    "category": "Job",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "8d919e59-694b-46f9-894b-5b6178e36c7f",
-    "amount": 100.0,
-    "category": "Business Venture",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "8d919e59-694b-46f9-894b-5b6178e36c7f",
-    "amount": 100.0,
-    "category": "Business Venture",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "300f200d-2fad-4cd2-8107-9335c2cf7e96",
-    "amount": 200.0,
-    "category": "Program Development",
-    "date": "08/07/2023"
-  },
-  {
-    "id": "b1857303-e34a-4ea9-af4d-39a59346d546",
-    "amount": 10000.0,
-    "category": "Business Venture",
-    "date": "08/07/2023"
+    "date": "09/07/2023",
+    "time": "16:22:58"
   }
 ]
