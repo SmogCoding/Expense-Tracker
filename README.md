@@ -12,8 +12,7 @@ The expense tracker application is a simple command-line application for users t
 ## Installation Guide
 
 1. Clone this repository
-2. Navigate to the project directory
-   1. `cd expense-tracker/application.`
+2. Navigate to the project directory `cd expense-tracker/application.`
 3. Type `python main.py` inside the application folder in the project directory.
 
 ## Usage Guide
