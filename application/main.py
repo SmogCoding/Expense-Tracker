@@ -90,7 +90,7 @@ def save_data(expenses):
     all_expenses = current_expenses + unique_expenses
 
     # Saves all expenses
-    with open('expenses.json', 'w') as file:
+    with open('application/expenses.json', 'w') as file:
         json.dump(all_expenses, file, indent=4)
 
     print("Data Saved")
@@ -101,7 +101,7 @@ def load_data():
     Function loads the data into the program
     '''
     try:
-        with open('expenses.json', 'r') as file:
+        with open('application/expenses.json', 'r') as file:
             try:
                 expenses = json.load(file)
                 return expenses
